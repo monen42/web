@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Online Sınav Portalı</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+      <div class="container" style="margin-top:150px;">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Soru Ekle</h1>
+          <label>Soru Yazınız</label>
+          <input type="text" id="txtSoru" class="form-control">
+          <label>A şıkkını yazınız</label>
+          <input type="combo-text" id="a" class="form-control">
+          <label>B şıkkını yazınız</label>
+          <input type="text" id="b" class="form-control">
+            <label>C şıkkını yazınız</label>
+           <input type="text" id="c" class="form-control">
+            <label>D şıkkını yazınız</label>
+           <input type="text" id="d" class="form-control">
+          <br>
+          <button id="btnEkle" class="btn btn-primary">Ekle</button>
+   </div>
+    <br>
+    <br>
+    <br>
+         <div class="col-md-8" id="sorular">
+        <h1>Sorular</h1>
+        <button class="btn btn-danger sil">Sil</button>
+        <h3>Aşağıdakilerden hangisi tümünü seçer?</h3>
+        <input type="radio" name="r" value="a"> CTRL+A
+        <input type="radio" name="r" value="b"> CTRL+C
+        <input type="radio" name="r" value="c"> CTRL+S
+        <input type="radio" name="r" value="d"> CTRL+V
+        <br>
+        <br>
+        <button class="btn btn-danger sil">Sil</button>
+        <h3>Aşağıdakilerden hangisi oturumu kapatır?</h3>
+        <input type="radio" name="rr" value="a">window+R
+        <input type="radio" name="rr" value="b">window+E
+        <input type="radio" name="rr" value="c">window+L
+        <input type="radio" name="rr" value="d">window+Break
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-danger sil">Sil</button>
+        <h3>Aşağıdakilerden hangisi oturumu kapatır?</h3>
+        <input type="radio" name="rr" value="a">window+R
+        <input type="radio" name="rr" value="b">window+E
+        <input type="radio" name="rr" value="c">window+L
+        <input type="radio" name="rr" value="d">window+Break
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-danger sil">Sil</button>
+        <h3>Aşağıdakilerden hangisi oturumu kapatır?</h3>
+        <input type="radio" name="rr" value="a">window+R
+        <input type="radio" name="rr" value="b">window+E
+        <input type="radio" name="rr" value="c">window+L
+        <input type="radio" name="rr" value="d">window+Break
+        <br>
+        <br>
+        <br>
+              
+        <button class="btn btn-danger sil">Sil</button>
+        <h3>Aşağıdakilerden hangisi oturumu kapatır?</h3>
+        <input type="radio" name="rr" value="a">window+R
+        <input type="radio" name="rr" value="b">window+E
+        <input type="radio" name="rr" value="c">window+L
+        <input type="radio" name="rr" value="d">window+Break
+        <br>
+        <br>
+        <br>
+              
+
+               </div>
+</div>
+    <script src="js/jquery-3.2.1.js"></script>
+  <script>
+      $(function () {
+          $("#btnEkle").click(function () {
+           
+                  
+            //if (txtSoru.value==""||a.value==""||b.value==""||c.value==""||d.value=="")
+            //  {
+            //      alert("Lütfen tüm alanları doldurunuz.");
+            //      return false;
+              //  }
+
+              
+              
+            $("#sorular").append("<button class='btn btn-danger sil'>" + 'Sil' + "</button>")
+         
+              $("#sorular").append("<h3>" + txtSoru.value + "</h3>")
+          
+              $("#sorular").append("<input type='radio'name='rr' value='a'>" + a.value)
+        
+              $("#sorular").append("<input type='radio'name='rr' value='b'>" + b.value)
+           
+              $("#sorular").append("<input type='radio'name='rr' value='c'>" + c.value)
+      
+              $("#sorular").append("<input type='radio'name='rr' value='d'<br><br><br>" + d.value)
+             
+           
+              
+          
+              
+
+        
+              });
+      });
+   
+      $(document).on("click", ".sil", function () {
+          var satir = $(this).closest("h3");
+          satir.remove();
+
+      });
+
+  </script>                        
+ </body>
+      
+ 
+
+
+
+   
